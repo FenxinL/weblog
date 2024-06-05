@@ -9,34 +9,26 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>weblog-web</artifactId>
+    <artifactId>weblog-module-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>weblog-web</name>
-    <description>weblog-web (入口项目，负责博客前台展示相关功能，打包也放在这个模块负责)</description>
+    <name>weblog-module-common</name>
+    <description>weblog-module-common (此模块用于存放一些通用的功能)</description>
 
     <dependencies>
-        <dependency>
-            <groupId>com.fenxin</groupId>
-            <artifactId>weblog-module-common</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fenxin</groupId>
-            <artifactId>weblog-module-admin</artifactId>
-        </dependency>
-
-        <!-- Web 依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <!-- 免写冗余的 Java 样板式代码 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <!-- 常用工具库 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>32.0.0-android</version>
+        </dependency>
+
         <!-- 单元测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,13 +37,5 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
